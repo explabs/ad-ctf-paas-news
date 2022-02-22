@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  news:
+    build:
+      context: .
+    restart: unless-stopped
+    environment:
+      - ADMIN_PASS=admin
+      - TELEGRAM_TOKEN=$TELEGRAM_TOKEN
+      - TELEGRAM_CHAT_ID=$TELEGRAM_CHAT_ID
+    volumes:
+      - ./news:/service/news/
+    networks:
+      - ad-ctf-paas-net
+
+networks:
+  ad-ctf-paas-net:
+    external: true
+    name: ad-ctf-paas-net
