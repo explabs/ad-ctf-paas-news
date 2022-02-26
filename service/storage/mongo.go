@@ -18,7 +18,7 @@ type NewsStruct struct {
 }
 
 func (n *NewsStruct) Load() {
-	filename, _ := filepath.Abs("news/news.yml")
+	filename, _ := filepath.Abs("config.yml")
 	yamlFile, err := ioutil.ReadFile(filename)
 	if err != nil {
 		panic(err)
