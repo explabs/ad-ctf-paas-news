@@ -14,8 +14,6 @@ import (
 )
 
 const NewsFolder = "news"
-const ImageFolder = "news/image"
-const audioFolder = "news/audio"
 
 type TelegramBot struct {
 	TelegramBotToken string
