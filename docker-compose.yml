@@ -5,7 +5,7 @@ services:
       context: .
     restart: unless-stopped
     environment:
-      - ADMIN_PASS=admin
+      - ADMIN_PASS=$ADMIN_PASS
       - TELEGRAM_TOKEN=$TELEGRAM_TOKEN
       - TELEGRAM_CHAT_ID=$TELEGRAM_CHAT_ID
     volumes:
